@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "webpack template",
   "main": "index.js",
+  "homepage": "https://c0mixz0ne.github.io/softnsk",
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "serve": "webpack serve --open --mode development"
+    "serve": "webpack serve --open --mode development",
+    "deploy": "gh-pages -d dist"
   },
   "author": "comixzone",
   "license": "ISC",
