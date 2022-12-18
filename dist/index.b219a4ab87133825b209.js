@@ -62,15 +62,15 @@ window.addEventListener('scroll', function () {
 });
 //Scroll
 var menuItems = document.querySelectorAll('.navigation__link');
-var form = document.querySelector('.form');
 var yOffset = 50;
-var coords = form.getBoundingClientRect().top + window.pageYOffset - yOffset;
 menuItems.forEach(function (menuItem) {
   // if (menuItem.href === ?) {
   //  do something
   // }
   menuItem.addEventListener('click', function (e) {
     e.preventDefault();
+    var form = document.querySelector('.form');
+    var coords = form.getBoundingClientRect().top + window.pageYOffset - yOffset;
     window.scrollTo({
       top: coords,
       behavior: "smooth"

@@ -63,15 +63,15 @@ window.addEventListener('scroll', () => {
 })
 //Scroll
 let menuItems = document.querySelectorAll('.navigation__link')
-let form = document.querySelector('.form')
 let yOffset = 50;
-let coords = form.getBoundingClientRect().top + window.pageYOffset - yOffset;
 menuItems.forEach(menuItem => {
   // if (menuItem.href === ?) {
   //  do something
   // }
   menuItem.addEventListener('click', (e) => {
     e.preventDefault()
+    let form = document.querySelector('.form')
+    let coords = form.getBoundingClientRect().top + window.pageYOffset - yOffset;
     window.scrollTo({
       top: coords,
       behavior: "smooth"
